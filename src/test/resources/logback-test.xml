@@ -1,0 +1,17 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} L[%level] T[%thread] C[%logger{0}] %message%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="com.revof11" level="INFO" additivity="false">
+    <appender-ref ref="STDOUT" />
+  </logger>
+
+  <root level="WARN">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+</configuration>
